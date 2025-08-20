@@ -1,4 +1,4 @@
-#Automated Email Sending to Educational Institutions
+# Automated Email Sending to Educational Institutions
 This project automates the bulk sending of internship request emails to educational centers using an Excel file containing personalized data for each recipient and their corresponding message. The system uses Python and secure SMTP connection with Gmail via an App Password.
 
 📑 Requirements
