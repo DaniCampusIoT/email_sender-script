@@ -1,14 +1,14 @@
 # Automated Email Sending to Educational Institutions
 This project automates the bulk sending of internship request emails to educational centers using an Excel file containing personalized data for each recipient and their corresponding message. The system uses Python and secure SMTP connection with Gmail via an App Password.
 
-📑 Requirements
+# 📑 Requirements
 Python 3.6 or higher
 
 Python packages: pandas, openpyxl
 
 Gmail account with 2-step verification (2FA) enabled and an App Password
 
-⬇️ Installation
+# ⬇️ Installation
 Clone this repository:
 
 text
@@ -18,7 +18,7 @@ Install dependencies:
 
 text
 pip install pandas openpyxl
-⚙️ Configuration
+# ⚙️ Configuration
 1. Enable 2-Step Verification (2FA) on your Google account.
 
 2. Generate an App Password:
@@ -35,11 +35,11 @@ Province	City	Generic Name	Specific Name	Code	Type	Phone	Email	Personalized Emai
 Málaga	Málaga	Private School Center	Example School	29000000	Associated Center	952000000	example@school.com	Subject: ... \n\n Dear ... (message)
 The Personalized Email column should contain the subject and body for each recipient (plain text, can have line breaks).
 
-📝 Example: Script Configuration
+# 📝 Example: Script Configuration
 Update your Python script with the following variables at the beginning:
 
-text
-import pandas as pd
+```bash
+ import pandas as pd
 import smtplib
 from email.mime.text import MIMEText
 
@@ -76,6 +76,8 @@ for i, row in df.iterrows():
         server.starttls()
         server.login(sender_email, sender_password)
         server.sendmail(sender_email, recipient, msg.as_string())
+ ```
+
 🚀 Usage
 Make sure your correos_personalizados.xlsx is properly formatted.
 
