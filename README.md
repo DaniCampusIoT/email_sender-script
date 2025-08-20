@@ -31,9 +31,13 @@ pip install pandas openpyxl
 
 Your Excel file should include the following columns:
 
-Province	City	Generic Name	Specific Name	Code	Type	Phone	Email	Personalized Email
-Málaga	Málaga	Private School Center	Example School	29000000	Associated Center	952000000	example@school.com	Subject: ... \n\n Dear ... (message)
--The Personalized Email column should contain the subject and body for each recipient (plain text, can have line breaks).
+
+| Province | City   | Generic Name | Specific Name  | Code     | Type             | Phone      | Email                         | Personalized Email                     |
+|----------|--------|-------------|----------------|----------|------------------|------------|-------------------------------|----------------------------------------|
+| Málaga   | Málaga | Private School Center | Example School  | 29000000 | Associated Center | 952000000 | example@school.com            | Subject: ...<br><br>Dear ... (message) |
+
+
+- The Personalized Email column should contain the subject and body for each recipient (plain text, can have line breaks).
 
 # 📝 Example: Script Configuration
 Update your Python script with the following variables at the beginning:
