@@ -2,30 +2,30 @@
 This project automates the bulk sending of internship request emails to educational centers using an Excel file containing personalized data for each recipient and their corresponding message. The system uses Python and secure SMTP connection with Gmail via an App Password.
 
 # 📑 Requirements
-Python 3.6 or higher
+-Python 3.6 or higher
 
-Python packages: pandas, openpyxl
+-Python packages: pandas, openpyxl
 
-Gmail account with 2-step verification (2FA) enabled and an App Password
+-Gmail account with 2-step verification (2FA) enabled and an App Password
 
 # ⬇️ Installation
 Clone this repository:
-
-text
+```bash
 git clone https://github.com/your-username/correo_centros_maes.git
 cd correo_centros_maes
+```
 Install dependencies:
-
-text
+```bash
 pip install pandas openpyxl
+```
 # ⚙️ Configuration
 1. Enable 2-Step Verification (2FA) on your Google account.
 
 2. Generate an App Password:
 
-Go to https://myaccount.google.com/security
+-Go to https://myaccount.google.com/security
 
-Under “App passwords”, follow the steps to get your 16-character code.
+-Under “App passwords”, follow the steps to get your 16-character code.
 
 3. Prepare your correos_personalizados.xlsx file
 
@@ -33,13 +33,13 @@ Your Excel file should include the following columns:
 
 Province	City	Generic Name	Specific Name	Code	Type	Phone	Email	Personalized Email
 Málaga	Málaga	Private School Center	Example School	29000000	Associated Center	952000000	example@school.com	Subject: ... \n\n Dear ... (message)
-The Personalized Email column should contain the subject and body for each recipient (plain text, can have line breaks).
+-The Personalized Email column should contain the subject and body for each recipient (plain text, can have line breaks).
 
 # 📝 Example: Script Configuration
 Update your Python script with the following variables at the beginning:
 
 ```bash
- import pandas as pd
+import pandas as pd
 import smtplib
 from email.mime.text import MIMEText
 
@@ -78,22 +78,23 @@ for i, row in df.iterrows():
         server.sendmail(sender_email, recipient, msg.as_string())
  ```
 
-🚀 Usage
-Make sure your correos_personalizados.xlsx is properly formatted.
+# 🚀 Usage
+1. Make sure your correos_personalizados.xlsx is properly formatted.
 
-Run the script:
+2. Run the script:
 
-text
+```bash
 python automatiza_envios.py
-Check the terminal for confirmation or error messages.
+```
+3. Check the terminal for confirmation or error messages.
 
-🛡️ Security
-Never upload your app password or sensitive information to public repositories.
+# 🛡️ Security
+- Never upload your app password or sensitive information to public repositories.
 
-Use environment variables or secure config files for your credentials if sharing code.
+- Use environment variables or secure config files for your credentials if sharing code.
 
-🖇️ Credits
+# 🖇️ Credits
 Developed by Daniel Rodríguez Carrión.
 
-Questions?
+# Questions?
 If you have any issues, open an Issue or contact the developer.
