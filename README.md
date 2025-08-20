@@ -2,11 +2,11 @@
 This project automates the bulk sending of internship request emails to educational centers using an Excel file containing personalized data for each recipient and their corresponding message. The system uses Python and secure SMTP connection with Gmail via an App Password.
 
 # 📑 Requirements
--Python 3.6 or higher
+- Python 3.6 or higher
 
--Python packages: pandas, openpyxl
+- Python packages: pandas, openpyxl
 
--Gmail account with 2-step verification (2FA) enabled and an App Password
+-   Gmail account with 2-step verification (2FA) enabled and an App Password
 
 # ⬇️ Installation
 Clone this repository:
@@ -23,9 +23,9 @@ pip install pandas openpyxl
 
 2. Generate an App Password:
 
--Go to https://myaccount.google.com/security
+- Go to https://myaccount.google.com/security
 
--Under “App passwords”, follow the steps to get your 16-character code.
+- Under “App passwords”, follow the steps to get your 16-character code.
 
 3. Prepare your correos_personalizados.xlsx file
 
